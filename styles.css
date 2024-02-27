@@ -1,0 +1,15 @@
+body {
+    background-color: #FFFFCC; /* Light Yellow */
+    background-color: #FFFF99; /* Lighter Yellow */
+    background-color: #FFFF00; /* Pure Yellow */
+    background-color: #FFCC00; /* Slightly Orange Yellow */
+  }
+
+  body {
+    background: linear-gradient(to bottom, #FFFFCC 0%, #FFFF99 50%, #FFFF00 100%); 
+  }
+
+  body {
+    background: radial-gradient(circle, #FFFF99 0%, #FFFF00 50%, #FFCC00 100%); 
+  } 
+  
