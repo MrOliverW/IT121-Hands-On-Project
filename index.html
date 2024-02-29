@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insurance Company Premium Calculator</title>
-
+  <style>
+    body {
+      background-color: lightblue;
+      text-align: center;
+      font-size: 25px;
+    }
+    #premium, input, button {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Insurance Premium Company Calculator</h1>
+    <h1>Insurance Company Premium Calculator</h1>
   <label for="currentYear">Enter Current Year:</label>
   <input type="text" id="currentYear" placeholder="Enter current year" required>
   <br><br>
@@ -18,5 +28,6 @@
 
   <button>Calculate Premium</button>
   <div id="premium"></div>
+  <script src="insurance.js"></script>
 </body>
 </html>

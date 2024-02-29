@@ -16,14 +16,34 @@ function calculatePremium(currentYear, birthYear) {
   
     return premium;
   }
-  
-  // Get current year and birth year from user
-  const currentYear = parseInt(prompt("Enter the current year: "));
-  const birthYear = parseInt(prompt("Enter your birth year: "));
-  
-  // Calculate and display premium
-  const premium = calculatePremium(currentYear, birthYear);
-  
-  if (premium !== undefined) {
-    alert(`Your premium is $${premium}.`);
+
+    // Get current year and birth year from user
+    let currentYear = parseInt(prompt("Enter the current year: "));
+    let birthYear = parseInt(prompt("Enter your birth year: "));
+
+    // Calculate and display premium
+    let premium = calculatePremium(currentYear, birthYear);
+
+    if (premium !== undefined) {
+      alert(`Your premium is $${premium}.`);
+    } 
+
+
+  function displayPremium() {
+    currentYear = Number(document.getElementById('currentYear').value);
+    birthYear = Number(document.getElementById('birthYear').value);
+    premium = calculatePremium(currentYear, birthYear);
+
+    invalid();
   }
+
+  function invalid() {
+    if (premium !== undefined) {
+      document.getElementById('premium').innerHTML = `Your premium is $${premium}.`
+    } else {
+      document.getElementById('premium').innerHTML = `Invalid.`
+      return;
+    }
+  }
+
+  document.querySelector('button').addEventListener('click', displayPremium);
